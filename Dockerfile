@@ -10,6 +10,8 @@ WORKDIR /app
 
 COPY ./package.json /app/package.json
 RUN npm install --no-audit --production
+RUN npm install -g typescript
+RUN npm install -g ts-node
 
 COPY . /app
 WORKDIR /app
